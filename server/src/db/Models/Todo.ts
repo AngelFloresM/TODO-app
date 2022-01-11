@@ -6,10 +6,10 @@ const TODOSchema = new Schema({
   description: String,
   done: {
     type: Boolean,
-    default: false,
-  },
+    default: false
+  }
 });
 
-const TODOModel = model("TODO", TODOSchema);
+const TODO = model("TODO", TODOSchema);
 
-export { TODOModel };
+export { TODO };

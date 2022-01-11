@@ -8,24 +8,23 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { Router } from "express";
-import { TODOModel } from "../db/Models/Todo.js";
+import { TODO } from "../db/Models/Todo.js";
+import { getAllTODOS } from "../controllers/controller.todo.js";
 const route = Router();
-route.get("/", (req, res) => {
-    res.json({ message: "User Get Router" });
-});
+route.get("/", getAllTODOS);
 route.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { title, description } = req.body;
-    if (title) {
-        const newTODO = new TODOModel({ title, description });
-        yield newTODO.save();
-        res.json({ message: "TODO guardado" });
+    if (!title) {
+        return res.json({ message: "There is no TITLE" });
     }
-    res.json({ message: "There is no TITLE" });
+    const newTODO = new TODO({ title, description });
+    yield newTODO.save();
+    res.json({ message: "TODO guardado" });
 }));
 route.delete("/", (req, res) => {
     res.json({ message: "User Delete Router" });
 });
-route.put("/", (req, res) => {
-    res.json({ message: "User Update Router" });
-});
+route.put("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const todos = yield TODO.find({});
+}));
 export default route;

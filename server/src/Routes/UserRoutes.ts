@@ -1,31 +1,30 @@
 import { Router, Response, Request } from "express";
 
-import { TODOModel } from "../db/Models/Todo.js";
+import { TODO } from "../db/Models/Todo.js";
+import {getAllTODOS} from "../controllers/controller.todo.js"
 
 const route: Router = Router();
 
-route.get("/", (req: Request, res: Response) => {
-  res.json({ message: "User Get Router" });
-});
+route.get("/", getAllTODOS);
 
 route.post("/", async (req: Request, res: Response) => {
   const { title, description } = req.body;
 
-  if (title) {
-    const newTODO = new TODOModel({ title, description });
-    await newTODO.save();
-    res.json({ message: "TODO guardado" });
+  if (!title) {
+    return res.json({ message: "There is no TITLE" });
   }
-  
-  res.json({ message: "There is no TITLE" });
+
+  const newTODO = new TODO({ title, description });
+  await newTODO.save();
+  res.json({ message: "TODO guardado" });
 });
 
 route.delete("/", (req: Request, res: Response) => {
   res.json({ message: "User Delete Router" });
 });
 
-route.put("/", (req: Request, res: Response) => {
-  res.json({ message: "User Update Router" });
+route.put("/", async (req: Request, res: Response) => {
+  const todos = await TODO.find({});
 });
 
 export default route;
