@@ -1,0 +1,63 @@
+.form-container {
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(243, 243, 243);
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+form {
+  width: 30rem;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form label {
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: rgb(80, 80, 80);
+}
+
+form input[type="text"],
+form textarea {
+  padding: 10px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(187, 187, 187);
+}
+
+form input[type="text"]:focus,
+form textarea:focus{
+  outline: none;
+  border-bottom: 1px solid rgb(23, 104, 175);
+}
+
+form textarea {
+  resize: none;
+  height: auto;
+}
+
+.submit-button {
+  position: relative;
+  width: 8rem;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: inherit;
+  align-self: flex-start;
+  color: white;
+  background-color: rgb(23, 104, 175);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: scale 50ms ease-in-out;
+}
+
+.submit-button:active{
+  scale: 0.9;
+}

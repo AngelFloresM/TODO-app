@@ -1,0 +1,7 @@
+.todoList-container{
+  width: 70%;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+}

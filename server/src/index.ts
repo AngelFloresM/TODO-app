@@ -1,10 +1,10 @@
 import express, { Application, Request, Response } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import morgan from "morgan"
+import morgan from "morgan";
 
 import { main } from "./db/index.js";
-import todoRoute from "./Routes/UserRoutes.js";
+import todoRoute from "./Routes/TodoRoute.js";
 
 dotenv.config();
 
@@ -15,7 +15,7 @@ main().catch((err) => {
   console.log(err);
 });
 
-app.use(morgan("dev"))
+app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors());
 app.use("/todo", todoRoute);

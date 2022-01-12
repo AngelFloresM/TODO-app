@@ -1,7 +1,19 @@
-POST  http://localhost:8080/todo/
-
+POST  http://localhost:8080/todo 
 Content-Type: application/json
 
 {
-  "description": "Haciendo kk"
+  "title": "TODO 1",
+  "description": "This is the first TODO"
 }
+
+###
+
+GET http://localhost:8080/todo
+
+###
+
+GET http://localhost:8080/todo/61de1ffbf9cdc302c1e53501
+
+###
+
+DELETE  http://localhost:8080/todo/61de210d3a66b0f4fb773db5

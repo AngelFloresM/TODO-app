@@ -23,5 +23,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# local enviroment files
 .env
+
+# transpiled TS to JS directory
 /server/dist
