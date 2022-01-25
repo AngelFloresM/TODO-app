@@ -1,14 +1,14 @@
 import mongoose from "mongoose";
 const { Schema, model, SchemaTypes } = mongoose;
 
-interface TODOFields {
+interface NoteFields {
   title: string;
   description: string;
   done: boolean;
   user_id: string
 }
 
-const TODOSchema = new Schema<TODOFields>({
+const NoteSchema = new Schema<NoteFields>({
   title: String,
   description: String,
   done: {
@@ -18,6 +18,6 @@ const TODOSchema = new Schema<TODOFields>({
   user_id: SchemaTypes.ObjectId
 });
 
-const TODO = model<TODOFields>("TODO", TODOSchema);
+const Note = model<NoteFields>("Note", NoteSchema);
 
-export { TODO };
+export { Note };
