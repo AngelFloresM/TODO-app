@@ -1,0 +1,61 @@
+.navbar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 3fr;
+  padding: 20px 0;
+}
+
+.note-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Olive Display";
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #505050;
+  border-right: 2px solid #505050;
+}
+
+.logo span {
+  font-weight: bold;
+  color: #1768af;
+  letter-spacing: 0pt;
+}
+
+.note-search{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.note-search input {
+  width: 70%;
+  height: 100%;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  background-color: #F3F3F3;
+}
+
+.note-search input:focus {
+  outline: none;  
+}
+
+.note-search-icon{
+  padding: 10px;
+  background-color: #F3F3F3;
+  border-radius: 10px 0 0 10px;
+}
+
+.note-search .fa-search{
+  font-size: 1rem;
+}
+
+.note-search path{
+  fill: #505050;
+}

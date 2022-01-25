@@ -1,47 +1,47 @@
 import { Request, Response } from "express";
 
-import { TODO } from "../db/Models/Todo.js";
+import { Note } from "../db/Models/Note.js";
 
-async function getTODOList(req: Request, res: Response) {
-  const todoList = await TODO.find({}, "title description done");
+async function getNoteList(req: Request, res: Response) {
+  const todoList = await Note.find({}, "title description done");
   res.json(todoList);
 }
 
-async function getSingleTODO(req: Request, res: Response) {
+async function getSingleNote(req: Request, res: Response) {
   const { id } = req.params;
-  const todo = await TODO.findById(id, "title description");
+  const todo = await Note.findById(id, "title description");
   res.json(todo);
 }
 
-async function createNewTODO(req: Request, res: Response) {
+async function createNote(req: Request, res: Response) {
   const { title, description } = req.body;
 
   console.log({ title, description });
 
-  // if (!title) {
-  //   return res.json({ message: "There is no TITLE" });
-  // }
+  if (!title) {
+    return res.json({ message: "There is no TITLE" });
+  }
 
-  // const newTODO = new TODO({ title, description });
-  // await newTODO.save();
-  // return res.json({ message: "TODO saved" });
+  const newNote = new Note({ title, description });
+  await newNote.save();
+  return res.json({ message: "Note saved" });
 }
 
-async function deleteTODO(req: Request, res: Response) {
+async function deleteNote(req: Request, res: Response) {
   const { id } = req.params;
 
-  const deletedItem = await TODO.findByIdAndDelete(id);
+  const deletedItem = await Note.findByIdAndDelete(id);
 
-  if(!deletedItem) return res.json({message: "There is not such TODO id"})
+  if (!deletedItem) return res.json({ message: "There is not such Note id" });
   console.log(deletedItem);
 }
 
-async function updateTODO(req: Request, res: Response) {
+async function updateNote(req: Request, res: Response) {
   const { id } = req.params;
 
-  const foundTODO = await TODO.findById(id);
-  foundTODO.description = "";
-  await foundTODO.save();
-  }
+  const foundNote = await Note.findById(id);
+  foundNote.description = "";
+  await foundNote.save();
+}
 
-export { getTODOList, getSingleTODO, createNewTODO, deleteTODO };
+export { getNoteList, getSingleNote, createNote, deleteNote };

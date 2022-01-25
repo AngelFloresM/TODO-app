@@ -1,0 +1,16 @@
+#editor-container{
+  min-width: 1rem;
+  padding: 10px;
+  margin: 20px 0;
+  background-color: antiquewhite;
+}
+
+#editor{
+  width: 100%;
+  padding: 20px;
+  font-family: inherit;
+}
+
+
+
+/* TapGoods */

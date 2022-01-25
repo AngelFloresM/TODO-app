@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 
-import todoAPI from "../api/TodoAPI";
+import notesAPI from "../api/NoteAPI";
 import "./Form.css";
 
 interface FormInputs {
@@ -25,13 +25,15 @@ function Form() {
 
   const handleSubmitForm = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    await todoAPI.postTODO(formData);
+    const data = await notesAPI.postTODO(formData);
+    const { message } = await data.json();
+    console.log(message);
   };
 
   return (
     <div className="form-container">
-      <form onSubmit={handleSubmitForm}>
-        <label htmlFor="title">Write a TODO:</label>
+      <form className="note-form" onSubmit={handleSubmitForm}>
+        <label htmlFor="title">New note:</label>
         <input
           type="text"
           name="title"
@@ -49,7 +51,7 @@ function Form() {
           rows={1}
         />
         <button value="Click me" className="submit-button">
-          Click Me
+          Save
         </button>
       </form>
     </div>

@@ -5,7 +5,7 @@
   border-bottom: 1px solid rgb(201, 201, 201);
 }
 
-form {
+.note-form {
   width: 30rem;
   margin: 0 auto;
   padding: 20px 40px;
@@ -14,15 +14,15 @@ form {
   gap: 10px;
 }
 
-form label {
+.note-form label {
   text-align: left;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: rgb(80, 80, 80);
 }
 
-form input[type="text"],
-form textarea {
+.note-form input[type="text"],
+.note-form textarea {
   padding: 10px;
   font-family: inherit;
   font-size: 0.9rem;
@@ -31,13 +31,13 @@ form textarea {
   border-bottom: 1px solid rgb(187, 187, 187);
 }
 
-form input[type="text"]:focus,
-form textarea:focus{
+.note-form input[type="text"]:focus,
+.note-form textarea:focus{
   outline: none;
   border-bottom: 1px solid rgb(23, 104, 175);
 }
 
-form textarea {
+.note-form textarea {
   resize: none;
   height: auto;
 }

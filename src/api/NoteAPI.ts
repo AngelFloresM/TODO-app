@@ -12,18 +12,15 @@ const API = {
     return todoList;
   },
 
-  postTODO: async ({ title, description }: TODOValues) => {
+  postTODO: async ({ title, description }: TODOValues): Promise<Response> => {
     const URL = "http://localhost:8080/todo";
-    await fetch(URL, {
+    const response = await fetch(URL, {
       method: "post",
       headers: new Headers({ "Content-Type": "application/json" }),
       body: JSON.stringify({ title, description }),
     });
-
-    // const todoList = await data.json();
-
-    // return todoList;
+    return response;
   },
 };
 
-export default API ;
+export default API;

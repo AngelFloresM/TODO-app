@@ -1,12 +1,12 @@
 .todo-item {
-  max-width: 20rem;
+  width: 20rem;
   height: 10rem;
   padding: 15px;
   background-color: rgb(238, 238, 238);
   border: 1px solid rgb(221, 221, 221);
   border-radius: 5px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
   transition: scale 150ms ease-in-out;
+  opacity: 0;
 }
 
 .todo-item:hover {
@@ -20,12 +20,11 @@
 .todo-title {
   font-size: 1.1rem;
   font-weight: 500;
-  color: rgb(192, 120, 26);
+  color: rgb(70, 70, 70);
   padding-bottom: 0.3rem;
-  border-bottom: 1px solid rgb(247, 201, 141);
 }
 
 .todo-description {
   margin-top: 1rem;
-  color: rgb(78, 78, 78);
+  color: rgb(100, 100, 100);
 }

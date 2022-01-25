@@ -1,14 +1,16 @@
 import React from "react";
+
+import Nav from "./components/commun/Nav";
+import NotesContent from "./components/NotesContent";
+
 import "./App.css";
 
-import TodoList from "./components/TodoList";
-import Form from "./components/Form";
-
 function App() {
+
   return (
     <div className="App">
-      <Form />
-      <TodoList />
+      <Nav />
+      <NotesContent/>
     </div>
   );
 }
