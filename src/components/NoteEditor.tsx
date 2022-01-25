@@ -35,6 +35,7 @@ function NoteEditor() {
       onClick={handleClickEditor}
       onFocus={handleClickEditor}
     >
+      <input type="text" id="note-title" placeholder="Title"/>
       <textarea
         name="note-editor"
         id="editor"

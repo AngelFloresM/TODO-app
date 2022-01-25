@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import "./Todo.css";
+import "./Note.css";
 
 interface TodoStructure {
   title: string;

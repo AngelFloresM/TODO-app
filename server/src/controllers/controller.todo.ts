@@ -40,8 +40,9 @@ async function updateNote(req: Request, res: Response) {
   const { id } = req.params;
 
   const foundNote = await Note.findById(id);
+  console.log(foundNote)
   foundNote.description = "";
   await foundNote.save();
 }
 
-export { getNoteList, getSingleNote, createNote, deleteNote };
+export { getNoteList, getSingleNote, createNote, deleteNote, updateNote };
