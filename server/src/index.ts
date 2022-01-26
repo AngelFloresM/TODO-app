@@ -4,7 +4,7 @@ import cors from "cors";
 import morgan from "morgan";
 
 import { main } from "./db/index.js";
-import todoRoute from "./Routes/TodoRoute.js";
+import NoteRouter from "./Routes/NoteRouter.js";
 
 dotenv.config();
 
@@ -18,7 +18,7 @@ main().catch((err) => {
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors());
-app.use("/todo", todoRoute);
+app.use("/todo", NoteRouter);
 
 app.get("/", (req: Request, res: Response) => {
   res.json({ message: "Success" });
