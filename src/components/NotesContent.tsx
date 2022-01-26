@@ -1,13 +1,13 @@
 import React from "react";
 import NoteEditor from "./NoteEditor";
-import NoteList from "./NoteList";
 
 import "./NotesContent.css"
+import Sidebar from "./Sidebar";
 
 function NotesContent() {
   return (
     <div className="notes-content">
-      <NoteList />
+      <Sidebar/>      
       <NoteEditor />
     </div>
   );
