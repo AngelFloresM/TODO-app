@@ -1,4 +1,6 @@
 .notes-content{
+  height: 100%;
   display: grid;
   grid-template-columns: minmax(200px, 1fr) 3fr;
+  background-color: #f8f8f8;
 }

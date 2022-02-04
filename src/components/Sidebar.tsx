@@ -6,8 +6,8 @@ import "./Sidebar.css"
 
 function Sidebar() {
   return (
-    <div className="sidebar">
-      <NewNoteButton/>
+    <div className="sidebar-notes">
+      <NewNoteButton />
       <NoteList />
     </div>
   );

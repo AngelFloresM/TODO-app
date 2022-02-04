@@ -1,18 +1,10 @@
 #new-note-button{
   width: 100%;
   padding: 1rem;
-  margin-bottom: 1rem;
   font-size: 1rem;
   font-weight: bold;
-  color: #1768AF;
-  background-color: transparent;
-  border: 2px solid #1768AF;
-  border-radius: 5px;
-  transition: all 250ms ease-in-out;
-}
-
-#new-note-button:hover{
   color: white;
   background-color: #1768AF;
+  border: 1px solid #1768AF;
   cursor: pointer;
 }

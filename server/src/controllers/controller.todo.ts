@@ -9,8 +9,8 @@ async function getNoteList(req: Request, res: Response) {
 
 async function getSingleNote(req: Request, res: Response) {
   const { id } = req.params;
-  const todo = await Note.findById(id, "title description");
-  res.json(todo);
+  const note = await Note.findById(id, "title description");
+  res.json(note);
 }
 
 async function createNote(req: Request, res: Response) {

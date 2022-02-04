@@ -1,14 +1,25 @@
 #editor-container{
   min-width: 1rem;
-  padding: 0 1.5rem;
+  padding: 0.5rem 1.5rem;
+  display: grid;
+  grid-template-rows: 3rem 1fr;
+  gap: 1rem;
+
 }
 
 #note-title{
   width: 100%;
   padding: 1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: rgb(49, 49, 49);
+  border: none;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  background-color: transparent;
+}
+
+#note-title:focus{
+  outline: none;
+  border-bottom: 1px solid #1768AF;
 }
 
 #editor{
@@ -16,8 +27,10 @@
   padding: 1rem;
   font-family: inherit;
   resize: none;
+  border: none;
+  background-color: transparent;
 }
 
-
-
-/* TapGoods */
+#editor:focus{
+  outline: none;
+}

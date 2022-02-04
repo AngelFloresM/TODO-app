@@ -11,7 +11,14 @@ const API = {
 
     return todoList;
   },
-
+  getSingleNote: async (id) => {
+    const URL = `http://localhost:8080/todo/${id}`;
+    const response = await fetch(URL, {
+      method: "get",
+      headers: new Headers({ "Content-Type": "application/json" }),
+    });
+    return response;
+  },
   postTODO: async ({ title, description }: TODOValues): Promise<Response> => {
     const URL = "http://localhost:8080/todo";
     const response = await fetch(URL, {
