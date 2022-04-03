@@ -1,3 +1,5 @@
+@import './components/Variables.css';
+
 html {
   font-size: 100%;
   width: 100vw;
@@ -19,6 +21,6 @@ body {
   font-family: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(231, 231, 231);
   overflow: hidden;
+  background-color: var(--bgColor);
 }

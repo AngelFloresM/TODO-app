@@ -1,10 +1,12 @@
+@import './Variables.css';
+
 #new-note-button{
   width: 100%;
   padding: 1rem;
   font-size: 1rem;
   font-weight: bold;
   color: white;
-  background-color: #1768AF;
-  border: 1px solid #1768AF;
+  background-color: var(--accentColor);
+  border: 1px solid var(--accentColor);
   cursor: pointer;
 }
