@@ -17,8 +17,6 @@ main().catch((err) => {
 
 app.use(morgan("tiny"));
 app.use(express.json());
-// This is a comment on the Feature01 branch
-// This is a second comment on the Feature01 branch
 app.use(cors());
 app.use("/todo", NoteRouter);
 
